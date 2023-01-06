@@ -11,6 +11,27 @@ export class Boss extends Personnage {
     constructor(name, health, attack) {
         super(name, health, attack);
     }
+    enigme() {
+        // Sélectionne aléatoirement une énigme parmi celles disponibles
+        const enigmes = [
+            "Une fois que l'on me prononce, je n'existe plus. Qui suis-je ?",
+            "Je suis d'eau,je suis d'air,et je suis d'électricité. Qui suis-je ?",
+            "Quel heure est-il ?(écriture informatisée)",
+            "Quel est l'indice du premier 'i' de cette question ?",
+            "Que fait retourne Math.floor(1.3 * 10) ?"
+        ];
+        const enigme = enigmes[Math.floor(Math.random() * enigmes.length)];
+
+        // Demande à l'utilisateur de résoudre l'énigme
+        for (let i = 0; i < 3; i++) {
+            console.log(`Essai ${i + 1} : ${enigme}`);
+            const reponse = prompt("Quelle est la réponse ?");
+            if (reponse === "énigme") {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 export class Archer extends Personnage {
     constructor(name, health, attack, flèches) {
@@ -30,7 +51,7 @@ export class Archer extends Personnage {
             this.fleches += 6;
         }
     }
-    
+
     replenishArrows() {
         this.fleches += 1;
     }
