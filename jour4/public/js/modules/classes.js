@@ -23,14 +23,8 @@ export class Boss extends Personnage {
         const enigme = enigmes[Math.floor(Math.random() * enigmes.length)];
 
         // Demande à l'utilisateur de résoudre l'énigme
-        for (let i = 0; i < 3; i++) {
-            console.log(`Essai ${i + 1} : ${enigme}`);
-            const reponse = prompt("Quelle est la réponse ?");
-            if (reponse === "énigme") {
-                return true;
-            }
-        }
-        return false;
+        
+        
     }
 }
 export class Archer extends Personnage {
