@@ -1,7 +1,10 @@
-import { Boss,Personnage } from "./classes";
+import { Boss,Personnage } from "./classes.js";
 
-let venom = new Boss(`Venom`,100,15)
+let venom = new Boss(`Venom`,1000,15)
 let father = new Boss(`Father`,1000,25)
-let dio = new Boss(`Dio`,300,30)
+let dio = new Boss(`Dio`,3000,30)
 
-export{venom,father,dio}
+export{venom,father,dio,game}
+
+
+
